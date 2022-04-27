@@ -1,21 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import { useState } from 'react';
-
-class Menu extends React.Component {
-    render() {
-      return (
-        <div className="menu">
-          <div className='menuOption' id="menu1">Add A Recipe</div>
-          <div className='menuOption' id="menu2">Search Recipes by Category</div>
-          <div className='menuOption' id="menu3">Search Recipes by Name</div>
-          <div className='menuOption' id="menu3">My Recipes</div>
-          <div className='menuOption' id="menu3">Settings</div>
-        </div>
-      );
-    }
-  }
+import './App.css';
 
 class Ingredient extends React.Component{
     constructor(props){
@@ -135,15 +119,16 @@ class View extends React.Component{
     render(){
         return(
             <div className='container'>
-                <h1>Recipedia</h1>
-                <Menu/>
                 <h1>Add a Recipe!</h1>
-                <label>Recipe Name:</label>
-                
+                <label>Recipe Name: </label>
                 <input type="text" name="recipeName" className="recipeName" />
+                <br />
+                <br />
                 <h2>Add Ingredients</h2>
                 <Ingredient/>
+                <br />
                 <Steps/>
+                <br />
                 <button onClick={() => this.addRecipe()}>Add Recipe!</button>
             </div>
         );
